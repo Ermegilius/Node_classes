@@ -1,9 +1,8 @@
 'use strict';
 
 const http = require('http');
-const fs = require('fs').promises;
-
 const path = require('path');
+const { sendFile } = require('./functionlibrary');
 
 const { port, host } = require('./config.json');
 
@@ -19,6 +18,8 @@ const server = http.createServer((req, res) => {
         sendFile(res, homePath);
     } else if (route === '/hobbies') {
         sendFile(res, hobbiesPath);
+    } else if (route.startsWith('/styles/')) {
+        sendFile(res, path.join(__dirname, route), 'text/css');//applying styles from the folder
     } else {
         console.log('else');
         res.end();
@@ -28,18 +29,3 @@ const server = http.createServer((req, res) => {
 server.listen(port, host,
     () => console.log(`Server ${host}:${port} is running`)
 );
-
-async function sendFile(res, filePath) {
-    try {
-        const data = await fs.readFile(filePath, 'utf8');
-        res.writeHead(200, {
-            'Content-Type': 'text/html',
-            'Content-Length': Buffer.byteLength(data, 'utf8')
-        });
-        res.end(data);
-    }
-    catch (err) {
-        res.statusCode = 404;
-        res.end(`Error: ${err.message}`);// just for debugging
-    }
-}
