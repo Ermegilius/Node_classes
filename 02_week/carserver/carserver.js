@@ -65,7 +65,7 @@ function createCarsHtml(carsArray) {
                 <thead>
                     <tr><th>Model</th><th>License</th></tr>
                 </thead>
-                <tbody>
+                <tbody>cd
 
                 </tbody>`;
         for (const car of carsArray) {

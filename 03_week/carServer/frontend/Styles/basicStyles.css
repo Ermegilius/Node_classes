@@ -1,0 +1,28 @@
+html{
+    font-size: 100%;
+}
+
+main{
+    display: grid;
+    row-gap: 0.1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    background-color: aquamarine;
+}
+
+table,th,td{
+    border: 0.1rem solid black;
+    padding: 0.25rem;
+}
+
+#searchParams{
+    display: grid;
+    gap: 0.25rem;
+}

@@ -1,0 +1,7 @@
+[
+    {"model":"Fast","license":"ABC-10"},
+    {"model":"Med","license":"XYZ-2"},
+    {"model":"Slow","license":"SL-33"},
+    {"model":"Fast","license":"CBA-4"},
+    {"model":"Fast","license":"CBA-5"}
+]
