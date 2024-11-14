@@ -9,17 +9,18 @@ const { read, send, sendJson, isIn } = require('./library/utilities');
 const { getAllFlavors, getIceCream, hasFlavor } = require('./iceCreamStorage/iceCreamFreezer');
 
 const homePath = path.join(__dirname, 'home.html');
+console.log(homePath);
 
-const resourceRoutes = ['/stules/', '/js/', '/images/', '/favicon'];
+const resourceRoutes = ['/styles/', '/js/', '/images/', '/favicon'];
 
 const server = http.createServer(async (req, res) => {
-    const { pathName } = new URL(`http://${req.headers.host}${req.url}`);
-    const route = decodeURIComponent(pathName);
+    const { pathname } = new URL(`http://${req.headers.host}${req.url}`);
+    const route = decodeURIComponent(pathname);
     try {
         if (route === '/') {
             const result = await read(homePath);
+            console.log(homePath);
             send(res, result);
-
             //send(res, await read(homePath));//or like this
         } else if (isIn(route, ...resourceRoutes)) {
             const result = await read(path.join(__dirname, route));
@@ -28,7 +29,7 @@ const server = http.createServer(async (req, res) => {
         } else if (route === '/flavors') {
             const flavors = await getAllFlavors();
             sendJson(res, flavors);
-        } else if (isIn(route, '/iceCreams/')) {//route could be /iceCreams/vanilla
+        } else if (isIn(route, '/icecreams/')) {//route could be /icecreams/vanilla
             const pathParts = route.split('/');
             if (pathParts.length > 2) {
                 const iceCreamFlavor = pathParts[2];

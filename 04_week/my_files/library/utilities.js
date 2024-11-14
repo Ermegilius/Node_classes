@@ -1,8 +1,8 @@
 'use strict'
 
 const fs = require('fs').promises;
-
 const path = require('path');
+
 const MIMETYPES = require('./mimetypes.json');
 
 function read(filePath) {
@@ -28,9 +28,9 @@ function send(res, resource) {//resouece is an object {fileData, mime}
     res.end(resource.fileData, resource.mime.encoding)
 }
 
-function sendJson(res, jsonResource, statusCode = 200) {
+function sendJson(res, jsonResource, statuscode = 200) {
     const jsonData = JSON.stringify(jsonResource);
-    res.writeHead(statusCode, {
+    res.writeHead(statuscode, {
         'Content-Type': 'application/json'
     });
     res.end(jsonData);

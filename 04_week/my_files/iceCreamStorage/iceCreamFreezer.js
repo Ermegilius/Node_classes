@@ -17,11 +17,11 @@ async function getAllFlavors() {
     }
 }// end of getAllFlavors
 
-async function getIceCream(flavour) {
+async function getIceCream(flavor) {
     try {
         const data = await read(jsonPath);
         const iceCreams = await JSON.parse(data.fileData);
-        return iceCreams[flavour] || null;
+        return iceCreams[flavor] || null;
     }
     catch (err) {
         return null;
