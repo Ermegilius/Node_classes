@@ -1,0 +1,23 @@
+{
+    "vanilla":{
+        "name":"Vanilla",
+        "price":2,
+        "image":"vanilla.png"
+    },
+    "strawberry":{
+        "name": "Strawberry",
+        "price": 2.5,
+        "image": "strawberry.png"
+    },
+    "raspberry":{
+        "name": "Raspberry",
+        "price": 3,
+        "image": ""
+    }
+    ,
+    "banana": {
+        "name": "Banana",
+        "price": 4,
+        "image": ""
+    }
+}
