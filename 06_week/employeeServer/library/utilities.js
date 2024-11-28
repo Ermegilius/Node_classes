@@ -14,13 +14,7 @@ function read(filePath){
                                          };
     return fs.readFile(filePath, mime.encoding)
             .then(fileData=>({fileData,mime}))
-            // .then(fileData => ({ fileData: fileData, mime: mime }))
             .catch(err=>err); //just for debugging
-
-        // {
-        //     fileData:"",
-        //     mime:{type:"", encoding:""}
-        // }
 } //end of read
 
 function send(res, resource) { //resource is an object {fileData,mime}
@@ -44,6 +38,11 @@ function isIn(route, ...routes){
     }
     return false;
 }
+
+const allowedFormats = [
+    'application/x-www-form-urlencoded',
+    'application/json'
+];
 
 async function getEncodedPostData(request) {
     return new Promise((resolve, reject) => {
@@ -70,5 +69,5 @@ async function getEncodedPostData(request) {
     });
 }
 
-module.exports = { read, send, sendJson, isIn, getEncodedPostData };
 
+module.exports = { read, send, sendJson, isIn, getEncodedPostData };

@@ -45,18 +45,24 @@ function isIn(route, ...routes){
     return false;
 }
 
+const allowedFormats = [
+    'application/x-www-form-urlencoded',
+    'application/json'
+];
+
 async function getEncodedPostData(request) {
     return new Promise((resolve, reject) => {
         const type = request.headers['content-type'];
 
         if (allowedFormats.includes(type)) {
-            const dataBuffer = [];
-            request.on('data', fragment => dataBuffer.push(fragment));
+            const databuffer = [];
+            request.on('data', fragment => databuffer.push(fragment));
             request.on('end', () => {
-                const data = Buffer.concat(dataBuffer).toString();
+                const data = Buffer.concat(databuffer).toString();
                 if (type === 'application/json') {
                     return resolve(JSON.parse(data));
-                } else {
+                }
+                else {
                     const params = new URLSearchParams(data);
                     const jsonResult = {};
                     params.forEach((value, name) => jsonResult[name] = value);
@@ -64,11 +70,13 @@ async function getEncodedPostData(request) {
                 }
             });
             request.on('error', () => reject('Error during transmission'));
-        } else {
+        }
+        else {
             reject('Unsupported Content-Type');
         }
-    });
+    })
 }
+
 
 module.exports = { read, send, sendJson, isIn, getEncodedPostData };
 
