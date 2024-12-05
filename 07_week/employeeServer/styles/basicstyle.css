@@ -1,0 +1,79 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: grid;
+    row-gap: 1em;
+    padding: 1em;
+}
+
+h1 {
+    color: rgb(255, 204, 252);
+}
+
+.person {
+    padding: 1em;
+    border: orange 0.2em solid;
+}
+
+form div {
+    display: grid;
+    align-items: start;
+    row-gap: 0.5em;
+    padding-bottom: 1em;
+}
+
+.info {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, th, td {
+    border: 1px solid black;
+    padding: 0.25em;
+}
+
+th {
+    background-color: lightgray;
+}
+
+td {
+    background-color: lightyellow;
+}
+
+form div {
+    display: grid;
+    align-items: start;
+    row-gap: 0.5em;
+    padding-bottom: 1em;
+}
+
+#status.error h1 {
+    color: red;
+}
+
+#status.info h1 {
+    color: green;
+}
+
+#status.error p {
+    border: dashed red 0.2em;
+    width: fit-content;
+    padding: 1em;
+}
+
+#status.info p {
+    border: dashed green 0.2em;
+    width: fit-content;
+    padding: 1em;
+}

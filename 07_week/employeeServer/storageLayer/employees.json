@@ -1,0 +1,107 @@
+[
+    {
+        "id": 2,
+        "firstname": "Mary",
+        "lastname": "River",
+        "department": "admin",
+        "salary": 5000
+    },
+    {
+        "id": 3,
+        "firstname": "Amanda",
+        "lastname": "Jones",
+        "department": "ict",
+        "salary": 4500
+    },
+    {
+        "id": 4,
+        "firstname": "Vera",
+        "lastname": "jones",
+        "department": "transportation",
+        "salary": 4500
+    },
+    {
+        "id": 2345678,
+        "firstname": "fghjk,l./",
+        "lastname": "lk,mjnhbgvf",
+        "department": "sdfghjkl",
+        "salary": 7890
+    },
+    {
+        "id": 66,
+        "firstname": "jkhgfd",
+        "lastname": "fdgcfhvg",
+        "department": "hfgjd",
+        "salary": 56789
+    },
+    {
+        "id": 444,
+        "firstname": "tukyilo",
+        "lastname": "tdrfhgsreth",
+        "department": "teryjhusdfg",
+        "salary": 9876
+    },
+    {
+        "id": 567,
+        "firstname": "765",
+        "lastname": "567",
+        "department": "3245",
+        "salary": null
+    },
+    {
+        "id": 56766,
+        "firstname": "cxvgbn",
+        "lastname": "dfgb",
+        "department": "dfb",
+        "salary": 98765
+    },
+    {
+        "id": 123,
+        "firstname": "321",
+        "lastname": "123",
+        "department": "321",
+        "salary": 123
+    },
+    {
+        "id": 1234,
+        "firstname": "123",
+        "lastname": "123",
+        "department": "123",
+        "salary": 123
+    },
+    {
+        "id": 12345,
+        "firstname": "",
+        "lastname": "",
+        "department": "",
+        "salary": 0
+    },
+    {
+        "id": 123456,
+        "firstname": "",
+        "lastname": "",
+        "department": "",
+        "salary": 0
+    },
+    {
+        "id": 666,
+        "firstname": "1234567u",
+        "lastname": "jyhgdsfdccvm,h",
+        "department": "jkgfdxszdgfhnjm",
+        "salary": 98765
+    },
+    {
+        "id": 856,
+        "firstname": "sdfg",
+        "lastname": "zdfg",
+        "department": "dfthj",
+        "salary": 987654
+    },
+    {
+        "id": 32456,
+        "firstname": "gvfc xcv",
+        "lastname": "dsfgd",
+        "department": "dsrfg",
+        "salary": 98765
+    }
+]

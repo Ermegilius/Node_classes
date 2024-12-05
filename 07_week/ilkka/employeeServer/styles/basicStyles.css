@@ -1,0 +1,70 @@
+body{
+    background-image: url(/images/background.png);
+    background-size: cover;
+}
+
+main{
+    display: grid;
+    row-gap: 1em;
+    justify-items: center;
+    align-items: center;
+}
+
+h1{
+    color:green;
+}
+
+.person{
+    padding:1em;
+    border: solid orange 0.2em;
+}
+
+form div{
+    display: grid;
+    align-items: start;
+    row-gap: 0.5em;
+    padding-bottom:1em;
+}
+
+.info{
+    color:green;
+}
+
+.error{
+    color:red;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr, td, th{
+    border:solid 0.1em black;
+    padding:0.25em;
+}
+th{
+    background-color: bisque;
+}
+td {
+    background-color:beige;
+}
+
+#status.error h1{
+    color:red;
+}
+
+#status.info h1 {
+    color: green;
+}
+
+#status.error p {
+    border: dashed red 0.2em;
+    width:fit-content;
+    padding:1em;
+}
+
+#status.info p {
+    border: solid green 0.1em;
+    width: fit-content;
+    padding: 1em;
+}
