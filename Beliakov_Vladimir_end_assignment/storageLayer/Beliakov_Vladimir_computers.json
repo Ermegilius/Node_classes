@@ -1,12 +1,5 @@
 [
     {
-        "id": 2,
-        "name": "King 3000",
-        "type": "server",
-        "amount": 13,
-        "processor": "Selenium II"
-    },
-    {
         "id": 3,
         "name": "MaxEffect 2000",
         "type": "tabletop",
@@ -47,5 +40,12 @@
         "type": "pocket computer",
         "amount": 100,
         "processor": "BNE"
+    },
+    {
+        "id": 12345,
+        "name": "some name",
+        "type": "some type",
+        "amount": 1000,
+        "processor": "some processor"
     }
 ]
