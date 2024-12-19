@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars (if)</title>
+</head>
+<body>
+    <h1>All cars (if)</h1>
+    <% if (cars.length===0) { %>
+        <h2>No cars found</h2>
+    <% } else { %>
+        <table>
+            <thead>
+                <tr><th>Model</th><th>License</th></tr>
+            </thead>
+            <tbody>
+                <% cars.forEach(car=>{ %>
+                    <tr>
+                        <td><%= car.model %></td> <td> <%= car.license %> </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+   <% } %>
+    <a href="/">Home</a>    
+</body>
+</html>

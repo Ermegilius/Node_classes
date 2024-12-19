@@ -1,0 +1,33 @@
+h1{
+    color:green;
+}
+
+main{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap:1em;
+}
+
+table{
+    border-collapse: collapse;
+}
+th,td{
+    border: solid black 0.1em;
+    padding: 0.25em;
+}
+thead{
+    background-color: khaki;
+}
+.person{
+    border:solid blue 0.2em;
+    padding:0.5em;
+}
+
+.error{
+    color:red;
+}
+
+.info{
+    color:aquamarine;
+}
