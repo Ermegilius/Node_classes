@@ -1,0 +1,36 @@
+h1 {
+    color: blue;
+}
+
+main {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid black;
+    padding: 0.25rem;
+}
+
+thead {
+    background-color: lightblue;
+}
+
+.person {
+    border: solid 1px red;
+    padding: 0.5rem;
+}
+
+.error {
+    color: red;
+}
+
+.info {
+    color: green;
+}
