@@ -43,7 +43,9 @@ async function removeFromStorage(value) {
 
 async function getKeys() {
 	const storage = await readStorage(storageFilePath);
+	console.log("Storage content:", storage); // Log the storage content
 	const keys = new Set(storage.flatMap((item) => Object.keys(item)));
+	console.log("Unique keys:", [...keys]); // Log the unique keys
 	return [...keys];
 }
 

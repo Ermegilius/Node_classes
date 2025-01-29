@@ -12,16 +12,17 @@
         "type": "desktop"
     },
     {
-        "id": 5,
-        "name": "Acer Aspire",
-        "price": 100000,
-        "type": "supercomputer"
-    },
-    {
         "id": 30,
         "name": "HP Pavilion",
         "price": 1300,
         "type": "laptop",
         "salary": 1300
+    },
+    {
+        "id": 123,
+        "name": "321",
+        "price": "123",
+        "type": "321",
+        "salary": 123
     }
 ]
