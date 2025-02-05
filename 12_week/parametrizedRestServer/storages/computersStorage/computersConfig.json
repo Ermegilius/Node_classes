@@ -1,0 +1,6 @@
+{
+	"storageFile": "computers.json",
+	"adapterFile": "computersAdapter.js",
+	"primaryKey": "id",
+	"resource": "computers"
+}
