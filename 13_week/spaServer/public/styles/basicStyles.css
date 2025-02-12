@@ -1,0 +1,31 @@
+h1{
+    color:green;
+}
+
+main, #form{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1em;
+}
+
+#fields{
+    display: grid;
+    justify-items: left;
+    align-items: left;
+    row-gap: 0.5em;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table, th, td{
+    border: 0.1em solid black;
+}
+th,td{
+    padding:0.5em;
+}
+thead{
+    background-color: bisque;
+}

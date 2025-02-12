@@ -1,0 +1,6 @@
+{
+	"storageFile": "ordersStorage.json",
+	"adapterFile": "storageAdapter.js",
+	"primary_key": "ordernumber",
+	"resource": "orders"
+}

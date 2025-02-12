@@ -1,0 +1,65 @@
+[
+	{
+		"ordernumber": 1,
+		"orderdate": "2017-01-01",
+		"customer": {
+			"firstname": "MAtt",
+			"lastname": "River",
+			"address": {
+				"street": "Jokakatu 1",
+				"postcode": "0100 Helsinki",
+				"country": "Finland",
+				"phones": ["123321", "123235457", "5345678"]
+			}
+		},
+		"deliveryinstructions": ["Ring the doorbell, Leave the package behind the house", "Call me before delivery"],
+		"products": [
+			{
+				"productId": 1,
+				"productname": "phone",
+				"model": "topOne 321",
+				"amomunt": 2,
+				"price": 34.9,
+				"manufacturer": {
+					"name": "some name",
+					"country": "Japan",
+					"links": {
+						"home": ["link1", "link2", "link3"]
+					}
+				}
+			}
+		]
+	},
+	{
+		"ordernumber": 12,
+		"orderdate": "2016-02-01",
+		"customer": {
+			"firstname": "Vera",
+			"lastname": "River",
+			"address": {
+				"street": "12361 Smth",
+				"postcode": "11100 Espoo",
+				"country": "Finland",
+				"phones": ["90-0987", "45678", "978655"]
+			}
+		},
+		"deliveryinstructions": ["...............", ".................."],
+		"products": [
+			{
+				"productId": 1,
+				"productname": "phone",
+				"model": "topOne666",
+				"amomunt": 1,
+				"price": 54.9,
+				"manufacturer": {
+					"name": "name12",
+					"country": "Mexico",
+					"links": {
+						"home": ["link6", "link7", "link8"],
+						"support": ["link4", "link5"]
+					}
+				}
+			}
+		]
+	}
+]
