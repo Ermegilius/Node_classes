@@ -1,0 +1,19 @@
+h1 {
+	color: green;
+}
+
+table,
+th,
+td {
+	border-collapse: collapse;
+	border: solid 1px black;
+	padding: 0.25rem;
+}
+
+#total {
+	background-color: bisque;
+}
+
+div {
+	padding: 1em;
+}

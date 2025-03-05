@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>report</title>
+		<link rel="stylesheet" href="/styles/basicStyles.css" />
+		<script src="/js/fullReport.js" type="module"></script>
+	</head>
+	<body>
+		<main>
+			<div>
+				<label>Order id: <input type="text" id="orderid" /></label>
+				<button id="submit">submit</button>
+			</div>
+			<h1>Order confirmation</h1>
+			<section>
+				<h2>Customer</h2>
+				<div id="customerData"></div>
+			</section>
+			<table>
+				<thead>
+					<tr>
+						<th>productId</th>
+						<th>productname</th>
+						<th>amount</th>
+						<th>price</th>
+						<th>rowTotal</th>
+					</tr>
+				</thead>
+				<tbody id="rows"></tbody>
+			</table>
+			<h2>Total: <span id="total"></span> €</h2>
+		</main>
+	</body>
+</html>
