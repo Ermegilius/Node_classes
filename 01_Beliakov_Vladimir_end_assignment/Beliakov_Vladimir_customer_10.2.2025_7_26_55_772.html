@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>tehtävät</title>
+  <style>
+    
+ #valikko button {
+   width: 20em;
+ }
+
+ section > h2, main>h1 {
+   background-color: beige;
+ }
+
+ @media print {
+    #valikko,
+    #syote,
+    #haku,
+    #kaikki,
+    #virhe {
+      page-break-inside: avoid;
+      page-break-after: always;
+      padding: 10px;
+      height: 420px;
+      border: solid grey 1px;
+    }
+
+    #kaikki {
+      height: 1000px;
+    }
+
+    body {
+      font-size: 10pt;
+    }
+    section {
+      page-break-after: always;
+    }
+    section > div:last-of-type{
+      page-break-after:avoid;
+    }
+ }
+
+ @media screen {
+   #valikko,
+   #syote,
+   #haku,
+   #kaikki,
+   #virhe {
+     page-break-inside: avoid;
+     border: solid gray 1px;
+     padding: 1em;
+     margin: 10px;
+     height: 600px;
+   }
+
+   body {
+     font-size: 12pt;
+   }
+ }
+
+
+ ul.taulu {
+   font-family: monospace;
+   font-weight: bold;
+ }
+
+ input {
+   display: inline-block;
+   height: 20px;
+   border: black solid 2px;
+ }
+
+ label {
+   display: inline-block;
+   width: 150px;
+ }
+
+ .lihavointi {
+   font-weight: bold;
+ }
+
+ div {
+   padding: 10px;
+ }
+
+ .iso {
+   font-size: 16pt;
+ }
+
+ h2 .iso {
+   font-size: 24pt;
+ }
+
+ th,
+ td {
+   padding: 10px;
+   text-align: left;
+ }
+
+ .huom {
+   padding: 1em;
+   border: dashed 1px red;
+ }
+
+ .konsolivalikko>ol>li {
+   margin-left:1em;
+   font-family: monospace;
+ }
+
+ pre, .konsolivalikko>ol {
+   width: 70%;
+   padding: 1em;
+   background-color: lightgray;
+   font-weight: bold;
+ }
+
+ .avain {
+   color:blue;
+   font-weight: bold;
+ }
+
+ .arvo{
+   color:red;
+ }
+
+ .olioalku, .olioloppu, .taulukko{
+   font-weight: bold;
+ }
+ .olio{
+   padding-left:1em;
+   padding-top:0;
+   padding-bottom: 0;
+ }
+
+ .rivi{
+   padding:0;
+ }
+
+ .arvo.varchar::before{
+    content: '\0022';
+ }
+ .arvo.varchar::after {
+   content: '\0022';
+ }
+
+ .jsondata {
+   font-family: monospace;
+ }
+
+ table.csvdata {
+   border-collapse: collapse;
+   border: solid 1px black;
+ }
+
+ table.csvdata th {
+   background-color: lightgrey;
+   border-bottom: 1px solid black;
+ }
+
+ table.csvdata td,
+ table.csvdata th {
+   border-right: 1px solid black;
+   border-left: 1px solid black;
+ }
+
+  .xmldata .elementti,
+  .xmldata .elementtiloppu {
+    padding-left: 1em;
+  }
+
+  .xmldata .kentta {
+    padding-left: 2em;
+  }
+  </style>
+</head>
+  <body>
+    <header>Vladimir Beliakov</header>
+    <main>
+      <h1> Tasks</h1>
+      <ol>
+      
+          <li>Create a folder for the project</li> 
+      
+          <li>Write create statements for the database</li> 
+      
+          <li>Create the database</li> 
+      
+          <li>Create sql statements for accessing the data</li> 
+      
+          <li>Create data access layer for the data</li> 
+      
+          <li>Create REST server (indexREST.js)</li> 
+      
+          <li>Create a single-page application to use the data</li> 
+      
+          <li>Create a SPA server (indexSPA.js)</li> 
+      
+          <li>Submit the project</li> 
+      
+          <li>Appendix: Example web operations</li> 
+      
+      </ol>
+      
+      
+        <section class="projektinAlustusEN">
+          <h2>1 Create a folder for the project</h2>
+        
+          <div>
+     Create a folder for the project. Name the folder with
+     <strong>Beliakov_Vladimir_customer_project</strong>.
+  </div>
+  <div>
+    
+     Generate or write the <strong>package.json</strong> file for the project.
+    
+  </div>
+  
+  <div>
+    Install <strong>mariadb</strong> library into the project as dependency.
+  </div>
+  
+  
+    <div>
+      Use the library <strong>
+        database.js
+      </strong> from lectrure examples, when you manipulate the database.
+    </div>
+    
+  
+  <div>
+    Install all other necessary libraries to the project:
+    <p><strong>
+        express, cors, node-fetch</strong></p>
+  </div>
+  
+        </section>
+      
+        <section class="luontilauseetSqlEN">
+          <h2>2 Write create statements for the database</h2>
+        
+          <div>
+    Write create statements to create a database called
+    <strong><span class="iso">customerdb</span></strong>.
+  </div>
+  <div>Create a table <strong>customer</strong>, for
+    customer data. Table columns are:
+  </div>
+  <ul class="taulu">
+    
+    <li>
+      customerId
+      integer
+    </li>
+    
+    <li>
+      firstname
+      varchar(10)
+    </li>
+    
+    <li>
+      lastname
+      varchar(8)
+    </li>
+    
+    <li>
+      address
+      varchar(16)
+    </li>
+    
+    <li>
+      customerclass
+      varchar(26)
+    </li>
+    
+  </ul>
+  <div>
+     All columns are mandatory. The primary key is <strong>customerId</strong>.
+  </div>
+  <div>
+    Add two insert statements into the create statements for testing.
+  </div>
+  <div>
+    Create user <strong> conor@localhost
+    </strong> with password <strong> 166rYZB1</strong>.
+    Grant all necessary privileges to the user.
+  </div>
+  
+  <div class="huom">
+    
+    <div>
+      Save all necessary create statements
+      
+      
+      
+      into a sql file
+      <strong>Beliakov_Vladimir_customer_createStatements.sql</strong>
+      
+    </div>
+    
+  </div>
+        </section>
+      
+        <section class="luoTietokantaEN">
+          <h2>3 Create the database</h2>
+        
+            <div>
+      Create the database with the create statements from 
+      
+      
+      
+      
+      <strong>Beliakov_Vladimir_customer_createStatements.sql</strong>
+      
+      .
+    </div> 
+        </section>
+      
+        <section class="tietovarastokerrosSqlEN">
+          <h2>4 Create sql statements for accessing the data</h2>
+        
+         
+  <h3>Sql statements</h3>
+  
+  <div>
+    <div>With sql statements you should be able to
+    
+      <ul class="operaatiot">
+          <li><strong>select</strong></li>
+            
+          <li><strong>insert</strong></li>
+            
+          <li><strong>update</strong></li>
+            
+          <li><strong>delete</strong></li>
+              
+      </ul>
+      </div>
+    
+    <h4>Select</h4>
+    <div>
+      <div><strong>get</strong> all</div>
+      <div><strong>get</strong> using primary key <strong>customerId</strong> as a key.</div>
+    </div>
+    
+    
+    <h4>Insert</h4>
+    <div>
+      Data can be added. Primary key is <strong> customerId </strong>.
+    </div>
+    
+    
+      <h4>Update</h4>
+      <div>
+        All data except primary key (<strong>
+          customerId
+        </strong>) can be updated.
+        Primary key <strong>
+          customerId
+        </strong> serves as a selection criterion.
+      </div>
+      
+    
+    <h4>Delete</h4>
+    <div>
+      Data can be deleted using primary key <strong>customerId</strong> as criterion.
+    </div>
+    
+    
+  </div>
+        </section>
+      
+        <section class="tietovarastokerrosEN">
+          <h2>5 Create data access layer for the data</h2>
+        
+          <div>Create a datastorage layer with all necessary methods.</div>
+  <h3>Necessary operations:</h3>
+  <div>Your data access layer should have the following operations:
+    <ul class="operaatiot">
+    
+    <li><strong class="iso">get all</strong></li>
+    
+     
+    <li><strong class="iso">get one</strong></li>
+    
+    
+     
+    <li><strong class="iso">insert</strong></li>
+    
+     
+    <li><strong class="iso">update</strong></li>
+    
+     
+    <li><strong class="iso">remove</strong></li>
+    
+    </ul>
+  </div>
+  
+        </section>
+      
+        <section class="restpalvelinEN">
+          <h2>6 Create REST server (indexREST.js)</h2>
+        
+        <div>
+  Create a REST server. 
+  
+    Server is listening host <strong>localhost:4000</strong>.
+   
+  
+  Allow cross-origin requests (Cross-Origin Resource Sharing).
+  
+</div>
+<h3>REST API</h3>
+<div>
+  Create <strong>REST</strong> API. The resouces of the REST API
+  are given and returned in <strong>json</strong> format.
+  The API should include following:
+</div>
+
+<div>
+  <h3>Get all </h3>
+
+  <strong>GET</strong> /api/customers
+</div>
+
+
+<div>
+  <h3> Get customer</h3>
+  <strong>GET</strong> /api/customers/customerId
+  <h4>Example:</h4>
+  <strong>GET</strong> /api/customers/1
+</div>
+
+
+  <div>
+    <h3>Insert customer data</h3>
+    <strong>POST</strong> /api/customers
+  </div>
+  
+
+<div>
+  <h3>Update</h3>
+  <strong>PUT</strong> /api/customers
+  
+    <p>Note: <i>if the resource doesn't exist, it may be created</i></p>
+  
+</div>
+
+
+  <div>
+    <h3> Delete customer
+    </h3>
+    <strong>DELETE</strong> /api/customers/customerId
+        <h4>Example:</h4>
+        <strong>DELETE</strong> /api/customers/1
+  </div>
+  
+        </section>
+      
+        <section class="singlepageEN">
+          <h2>7 Create a single-page application to use the data</h2>
+        
+        <div>
+  Create a single-page web application. Use fetch to manipulate data.
+</div>
+<div>Create the following operations:</div>
+<ul class="operaatiot">
+  
+  <li><strong class="iso">get all</strong></li>
+  
+  
+  <li><strong class="iso">get one</strong></li>
+  
+  
+  <li><strong class="iso">insert</strong></li>
+  
+  
+  
+  <li><strong class="iso">remove</strong></li>
+  
+  
+</ul>
+<div>
+  Below (Appendix) are a few examples of web operations. Design and implement the main
+  menu and all other necessary pages. 
+</div>
+<div>
+  Design and implement stylesheets for your application.
+</div>
+        </section>
+      
+        <section class="verkkopalvelinSpaEN">
+          <h2>8 Create a SPA server (indexSPA.js)</h2>
+        
+        <div>
+  Create a server to serve single page aplication and necessary resources (html, css, js, etc.).
+  
+  Server is listening host <strong>localhost:3000</strong>.
+  
+  Main page can be opened from root route <strong class="iso">/</strong>.
+</div>
+        </section>
+      
+        <section class="palautusEN">
+          <h2>9 Submit the project</h2>
+        
+          <div>
+    Submit your project folder
+    <strong>Beliakov_Vladimir_customer_project</strong>
+    acording to instructions given separately.
+     
+    Remove the <strong>node_modules</strong> folder before submitting.
+    
+    
+    The project folder should include <strong>package.json</strong> file
+    
+  </div>
+  
+  <div>
+     The project folder should also include the database create statements
+    
+    
+    
+    in a sql file named as
+    <strong>Beliakov_Vladimir_customer_createStatements.sql</strong>
+    
+  </div>
+  
+  
+  
+
+  
+
+  
+        </section>
+      
+        <section class="fullstack_liite">
+          <h2>10 Appendix: Example web operations</h2>
+        
+        <div id="nakymat">
+  <h3>Menu</h3>
+  <div id="valikko">
+    <h1>Menu</h1>
+  
+    <p><button type="button">Get all</button></p>
+  
+    <p><button type="button">Get customer</button></p>
+    
+    <p><button type="button">Insert customer</button></p>
+    
+    <p><button type="button">Update customer </button></p>
+    
+    <p><button type="button">Delete customer</button></p>
+    
+ 
+  </div>
+  
+  <h3>Get all</h3>
+  <div id="kaikki">
+    <div id="haekaikki">
+  <h1>Get all</h1>
+  <table>
+    <thead>
+      <tr>
+        
+          <th>
+            customerId
+          </th>
+          
+          <th>
+            firstname
+          </th>
+          
+          <th>
+            lastname
+          </th>
+          
+          <th>
+            address
+          </th>
+          
+          <th>
+            customerclass
+          </th>
+          
+      </tr>
+    </thead>
+    </tbody>
+    
+    
+    
+      <tr>
+        
+          <td>
+            1000
+          </td>
+          
+          <td>
+            Jeff
+          </td>
+          
+          <td>
+            Hammer
+          </td>
+          
+          <td>
+            Cloudhill 3
+          </td>
+          
+          <td>
+            OrdinaryPenPusher
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            2000
+          </td>
+          
+          <td>
+            Matt
+          </td>
+          
+          <td>
+            Lake
+          </td>
+          
+          <td>
+            Street 20
+          </td>
+          
+          <td>
+            R.I.P
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            3000
+          </td>
+          
+          <td>
+            Sophie
+          </td>
+          
+          <td>
+            River
+          </td>
+          
+          <td>
+            Station 5
+          </td>
+          
+          <td>
+            KeyCustomer
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            4123
+          </td>
+          
+          <td>
+            Olivia
+          </td>
+          
+          <td>
+            Garcia
+          </td>
+          
+          <td>
+            Dataway 35
+          </td>
+          
+          <td>
+            SuperBonus
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            5000
+          </td>
+          
+          <td>
+            Abel
+          </td>
+          
+          <td>
+            Irony
+          </td>
+          
+          <td>
+            Bugpath 42
+          </td>
+          
+          <td>
+            ToBeAwoided
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            6543
+          </td>
+          
+          <td>
+            Paula
+          </td>
+          
+          <td>
+            Bell
+          </td>
+          
+          <td>
+            River side 2
+          </td>
+          
+          <td>
+            VIP
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            7987
+          </td>
+          
+          <td>
+            Layla
+          </td>
+          
+          <td>
+            Smith
+          </td>
+          
+          <td>
+            Codepath 2
+          </td>
+          
+          <td>
+            SolidGold
+          </td>
+          
+      </tr>
+      
+        </tbody>
+  </table>
+</div>
+  </div>
+  
+    <h3>Get customer</h3>
+    <div id="haku">
+        <div id="haeyksi">
+    <h1>Query result</h1>
+    
+    <p>customerId: 5000</p>
+    
+    <p>firstname: Abel</p>
+    
+    <p>lastname: Irony</p>
+    
+    <p>address: Bugpath 42</p>
+    
+    <p>customerclass: ToBeAwoided</p>
+    
+  </div>
+    </div>
+  
+  <h3>Add customer</h3>
+  <div id="syote">
+    <div id="syottolomake">
+  <h1>Add a customer</h1>
+  <form id="lomake" action="#" method="post">
+    
+      <p>
+        <label>customerId</label>
+        <input type="text" size="7">
+      </p>
+    
+      <p>
+        <label>firstname</label>
+        <input type="text" size="10">
+      </p>
+    
+      <p>
+        <label>lastname</label>
+        <input type="text" size="8">
+      </p>
+    
+      <p>
+        <label>address</label>
+        <input type="text" size="16">
+      </p>
+    
+      <p>
+        <label>customerclass</label>
+        <input type="text" size="26">
+      </p>
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
+  </div>
+
+</div>
+        </section>
+        
+    </main> 
+  </body>
+</html>

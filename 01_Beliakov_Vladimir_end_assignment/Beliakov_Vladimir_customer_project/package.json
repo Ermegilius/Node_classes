@@ -1,0 +1,25 @@
+{
+	"name": "beliakov_vladimir_customer_project",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "concurrently \"node indexREST.js\" \"node dataAccessLayer/spaServer/indexSPA.js\""
+	},
+	"keywords": [],
+	"author": {
+		"name": "Vladimir Beliakov",
+		"email": "ermegilius@gmail.com",
+		"url": "https://github.com/Ermegilius"
+	},
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"concurrently": "^9.1.2",
+		"cors": "^2.8.5",
+		"express": "^4.21.2",
+		"mariadb": "^3.4.0",
+		"node-fetch": "^3.3.2"
+	}
+}
