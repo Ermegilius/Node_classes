@@ -1,0 +1,21 @@
+{
+	"port": 4012,
+	"host": "localhost",
+
+	"engineFolder": "storageEngines",
+	"storageEngine": {
+		"folder": "sqlStorageLayer",
+		"dataStorageFile": "dataStorageLayer.js",
+		"createPaths": "createPaths.js"
+	},
+
+	"allStoragesFolder": "storages",
+	"storage": {
+		"folder": "personSqlStorage",
+		"storageConfigFile": "storageConfig.json"
+	},
+	"statuscodes": {
+		"folder": "libraries",
+		"statuscodefile": "statuscodes.json"
+	}
+}

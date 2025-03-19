@@ -1,0 +1,14 @@
+{
+    "databaseFile":"database.js",
+    "sqlStatements":"sqlStatements.json",
+    "adapterFile": "personAdapter.js",
+    "parameterFunctions":"parameterfunctions.js",
+    "options":{
+        "host":"localhost",
+        "port":"3306",
+        "user":"zeke",
+        "password":"1234",
+        "database":"employeedb",
+        "allowPublicKeyRetrieval":true
+    }
+}

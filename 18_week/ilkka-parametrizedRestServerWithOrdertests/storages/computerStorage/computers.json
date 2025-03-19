@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Small Brain",
+        "price": 3000,
+        "type": "laptop"
+    },
+    {
+        "id": 2,
+        "name": "Big Brain",
+        "price": 200000,
+        "type": "almost super computer"
+    },
+    {
+        "id": 3,
+        "name": "middle Brain",
+        "price": 300000,
+        "type": "super computer"
+    },
+    {
+        "id": 2345,
+        "name": "xyz",
+        "price": 12345,
+        "type": "server"
+    }
+]

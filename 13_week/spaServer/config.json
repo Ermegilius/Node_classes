@@ -1,6 +1,6 @@
 {
 	"port": 3001,
 	"host": "localhost",
-	"baseUlr": "http://localhost:4002/api/books",
-	"menufile": "menuBooks.html"
+	"baseUlr": "http://localhost:4013/api/computers",
+	"menufile": "menu.html"
 }
